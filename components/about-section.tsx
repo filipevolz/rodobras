@@ -20,7 +20,7 @@ const features = [
     icon: Award,
     title: "Qualidade Comprovada",
     description:
-      "Ha mais de 25 anos nos dedicamos exclusivamente a elevacao e movimentacao de cargas.",
+      "Há mais de 25 anos nos dedicamos exclusivamente a elevação e movimentação de cargas.",
   },
 ]
 

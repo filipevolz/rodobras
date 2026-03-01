@@ -105,7 +105,7 @@ const services = [
     icon: PackageOpen,
     title: "Remoções de Cargas",
     description: "Remoção em ambiente fechado de cargas pesadas ou delicadas. Movimentação vertical e horizontal de máquinas e equipamentos.",
-    applications: ["Movimentacao de injetoras e extrusoras", "Máquinas gráficas em indústrias", "Descida e subida por escadas", "Ambientes de dificil acesso"],
+    applications: ["Movimentação de injetoras e extrusoras", "Máquinas gráficas em indústrias", "Descida e subida por escadas", "Ambientes de difícil acesso"],
     image: "/remocoes_rodobras-01.jpg",
     badge: "Ambientes fechados",
     carouselImages: remocoesCarouselImages,
@@ -129,7 +129,7 @@ export function ServicesSection() {
           <Badge variant="secondary" className="mb-4">Nossos Servicos</Badge>
           <h2 id="servicos-heading" className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Sua melhor contratação para serviços de{" "}
-            <span className="text-accent">movimentacao de cargas</span>
+            <span className="text-accent">movimentação de cargas</span>
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground leading-relaxed">
             Oferecemos soluções completas e integradas para qualquer tipo de necessidade em movimentação, íçamento e transporte de cargas.
