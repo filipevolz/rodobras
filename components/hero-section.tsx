@@ -26,7 +26,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 pb-16 pt-20 lg:flex-row lg:items-center lg:gap-16 lg:px-8 lg:pb-24 lg:pt-28">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 pb-16 pt-20 lg:flex-row lg:items-start lg:gap-16 lg:px-8 lg:pb-24 lg:pt-28">
         <div className="min-w-0 w-full flex-1 text-center lg:text-left">
           <Badge variant="outline" className="mb-6 max-w-full shrink border-2 border-primary/40 bg-background/50 px-4 py-1.5 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm rounded-2xl whitespace-normal break-words">
             <span className="bg-primary w-2 h-2 rounded-full mr-2 shrink-0 hidden md:inline-block" aria-hidden></span>
@@ -85,7 +85,7 @@ export function HeroSection() {
           </ul>
         </div>
 
-        <figure className="mt-12 min-w-0 w-full flex-[1.2] lg:mt-0">
+        <figure className="mt-12 min-w-0 w-full flex-[1.2] lg:mt-0 lg:pt-20">
           <div className="relative" aria-hidden="true">
             <div className="absolute -inset-4 rounded-2xl bg-accent/20 blur-2xl" />
           </div>
