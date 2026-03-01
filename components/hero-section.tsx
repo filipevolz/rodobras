@@ -1,7 +1,6 @@
 import Image from "next/image"
-import Link from "next/link"
 import { basePath } from "@/lib/utils"
-import { ArrowRight, Phone, Shield, Clock, Truck } from "lucide-react"
+import { ArrowRight, Shield, Clock, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
@@ -46,7 +45,7 @@ export function HeroSection() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 text-base font-semibold">
               <a href="https://wa.me/5548991582727" target="_blank" rel="noopener noreferrer">
-                Solicite um Orcamento
+                Solicite um Orçamento
                 <ArrowRight className="size-4" />
               </a>
             </Button>

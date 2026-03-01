@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function CtaSection() {
@@ -15,13 +15,13 @@ export function CtaSection() {
           Precisa de um guindaste para seu projeto?
         </h2>
         <p className="max-w-2xl text-pretty text-lg text-accent-foreground/80 leading-relaxed">
-          Entre em contato agora e receba um orcamento personalizado. <br />Atendimento rapido e solucoes sob medida.
+          Entre em contato agora e receba um orçamento personalizado. <br />Atendimento rápido e soluções sob medida.
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row">
 
           <Button asChild variant="outline" size="lg" className="border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground">
           <a href="https://wa.me/5548991582727" target="_blank" title="(48) 99158-2727">
-              Solicite um Orcamento
+              Solicite um Orçamento
               <ArrowRight className="size-4" />
             </a>
           </Button>

@@ -41,10 +41,10 @@ export function ContactSection() {
             <Badge variant="secondary" className="mb-4">Contato</Badge>
             <h2 id="contato-heading" className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Solicite seu{" "}
-              <span className="text-accent">orcamento</span>
+              <span className="text-accent">orçamento</span>
             </h2>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              Entre em contato para orcamentos e informacoes. Nossa equipe esta pronta para atender seu projeto.
+              Entre em contato para orçamentos e informações. Nossa equipe esta pronta para atender seu projeto.
             </p>
 
             <ul className="mt-8 grid gap-4 sm:grid-cols-2" aria-label="Canais de contato">
@@ -85,7 +85,7 @@ export function ContactSection() {
                     Fale conosco pelo WhatsApp
                   </h3>
                   <p className="mt-3 text-primary-foreground leading-relaxed">
-                    Resposta rapida e atendimento personalizado. Envie as informacoes do seu projeto e receba um orcamento sem compromisso.
+                    Resposta rápida e atendimento personalizado. Envie as informações do seu projeto e receba um orçamento sem compromisso.
                   </p>
                 </div>
                 <Button asChild variant="outline" size="lg" className="w-full border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
