@@ -69,15 +69,15 @@ export function ContactSection() {
           </div>
 
           <aside className="w-full max-w-md flex-1" aria-label="Chamar no WhatsApp">
-            <Card className="overflow-hidden border-0 bg-primary">
-              <CardContent className="flex flex-col items-center gap-6 p-8 text-center lg:p-10">
+            <Card className="overflow-hidden border-0 bg-primary justify-between">
+              <CardContent className="flex flex-col items-center gap-6 px-8 lg:pb-18 lg:pt-6 py-8 text-center">
                 <span className="flex size-20 items-center justify-center" aria-hidden="true">
                   <Image
                     src={`${basePath}/rodobras-marca.png`}
                     alt="Rodobras Guindastes"
-                    width={56}
-                    height={56}
-                    className="h-14 w-auto object-contain brightness-0 invert"
+                    width={80}
+                    height={80}
+                    className="w-auto object-contain brightness-0 invert"
                   />
                 </span>
                 <div>

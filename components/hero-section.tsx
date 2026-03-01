@@ -8,6 +8,14 @@ import { Badge } from "@/components/ui/badge"
 export function HeroSection() {
   return (
     <section id="inicio" className="relative overflow-hidden" aria-labelledby="hero-heading">
+      {/* Gradiente radial saindo do centro com cor primária */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background: "radial-gradient(ellipse 80% 80% at 50% 50%, color-mix(in oklch, var(--primary) 18%, transparent) 0%, transparent 65%)",
+        }}
+      />
       {/* Background pattern - decorativo, ignorado por leitores de tela */}
       <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true">
         <div
@@ -19,8 +27,9 @@ export function HeroSection() {
       </div>
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 pb-16 pt-20 lg:flex-row lg:items-center lg:gap-16 lg:px-8 lg:pb-24 lg:pt-28">
-        <div className="flex-1 text-center lg:text-left">
-          <Badge variant="outline" className="mb-6 border-border text-foreground">
+        <div className="min-w-0 w-full flex-1 text-center lg:text-left">
+          <Badge variant="outline" className="mb-6 max-w-full shrink border-2 border-primary/40 bg-background/50 px-4 py-1.5 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm rounded-2xl whitespace-normal break-words">
+            <span className="bg-primary w-2 h-2 rounded-full mr-2 shrink-0 hidden md:inline-block" aria-hidden></span>
             Desde 1999 movimentando cargas com seguranca
           </Badge>
 
@@ -30,7 +39,7 @@ export function HeroSection() {
             para qualquer porte de projeto
           </h1>
 
-          <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground lg:text-xl">
+          <p className="mt-6 w-full max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground break-words lg:text-xl">
             Locação de guindastes, muncks, transportes especiais e remocao de cargas. Atendemos com alcance de ate 95 metros e capacidade de ate 240 toneladas.
           </p>
 
@@ -76,11 +85,11 @@ export function HeroSection() {
           </ul>
         </div>
 
-        <figure className="mt-12 flex-1 lg:mt-0">
+        <figure className="mt-12 min-w-0 w-full flex-1 lg:mt-0">
           <div className="relative" aria-hidden="true">
             <div className="absolute -inset-4 rounded-2xl bg-accent/20 blur-2xl" />
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border hidden md:block">
               <Image
                 src={`${basePath}/munks_rodobras-01.jpg`}
                 alt="Guindaste Rodobras em operacao"

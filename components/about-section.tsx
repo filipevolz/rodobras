@@ -26,13 +26,13 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="bg-background py-20 lg:py-28" aria-labelledby="sobre-heading">
+    <section id="sobre" className="bg-background py-12 md:py-16 lg:py-28" aria-labelledby="sobre-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="mb-8 flex justify-center">
+        <div className="mb-4 md:mb-8 flex justify-center">
           <Badge variant="secondary">Sobre Nos</Badge>
         </div>
 
-        <div className="flex flex-col items-center gap-16 lg:flex-row">
+        <div className="flex flex-col-reverse items-center gap-8 lg:flex-row lg:gap-16">
           <figure className="flex-1">
             <div className="relative">
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-accent/20" aria-hidden="true" />

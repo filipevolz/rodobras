@@ -7,11 +7,11 @@ const footerLinks = {
   servicos: [
     { label: "Locação de Guindastes", href: "#servicos" },
     { label: "Locação de Muncks", href: "#servicos" },
-    { label: "Remocoes de Cargas", href: "#servicos" },
+    { label: "Remoções de Cargas", href: "#servicos" },
     { label: "Transportes Especiais", href: "#servicos" },
   ],
   empresa: [
-    { label: "Sobre Nos", href: "#sobre" },
+    { label: "Sobre Nós", href: "#sobre" },
     { label: "Clientes", href: "#clientes" },
     { label: "Contato", href: "#contato" },
   ],
@@ -21,7 +21,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-primary">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6 lg:gap-4">
           <div className="lg:col-span-2">
             <Image
               src={`${basePath}/logo-dark.png`}
@@ -35,9 +35,9 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <nav aria-label="Serviços">
+          <nav aria-label="Serviços" className="lg:justify-self-center">
             <h4 className="text-xs font-semibold uppercase tracking-widest text-primary-foreground">
-              Servicos
+              Serviços
             </h4>
             <ul className="mt-4 flex flex-col gap-2">
               {footerLinks.servicos.map((link) => (
@@ -53,7 +53,7 @@ export function SiteFooter() {
             </ul>
           </nav>
 
-          <nav aria-label="Empresa">
+          <nav aria-label="Empresa" className="lg:justify-self-center">
             <h4 className="text-xs font-semibold uppercase tracking-widest text-primary-foreground">
               Empresa
             </h4>
@@ -70,6 +70,25 @@ export function SiteFooter() {
               ))}
             </ul>
           </nav>
+
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-primary-foreground mb-2">
+              Localização
+            </h4>
+            <div className="overflow-hidden rounded-lg w-full">
+              <iframe
+                src="https://www.google.com/maps?q=Rodobras+Cranes+%26+Muncks+R+Paula+Ramos+702+Coqueiros+Florian%C3%B3polis+SC&output=embed"
+                width="400"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Rodobras Cranes & Muncks"
+                className="w-full max-w-full"
+              />
+            </div>
+          </div>
         </div>
 
         <Separator className="my-8 bg-primary-foreground/10" />

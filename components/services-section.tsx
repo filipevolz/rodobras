@@ -139,7 +139,7 @@ export function ServicesSection() {
         <ul className="mt-16 grid gap-6 md:grid-cols-2">
           {services.map((service) => (
             <li key={service.title}>
-            <Card className="group overflow-hidden border-border/60 pt-0 transition-all hover:border-accent/40 hover:shadow-lg">
+            <Card className="min-h-140 group overflow-hidden border-border/60 pt-0 transition-all hover:border-accent/40 hover:shadow-lg justify-between">
               {/* Image or Carousel com autoplay */}
               <div className="relative h-72 overflow-hidden">
                 {"carouselImages" in service && service.carouselImages ? (
