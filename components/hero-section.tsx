@@ -29,7 +29,7 @@ export function HeroSection() {
         <div className="min-w-0 w-full flex-1 text-center lg:text-left">
           <Badge variant="outline" className="mb-6 max-w-full shrink border-2 border-primary/40 bg-background/50 px-4 py-1.5 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm rounded-2xl whitespace-normal break-words">
             <span className="bg-primary w-2 h-2 rounded-full mr-2 shrink-0 hidden md:inline-block" aria-hidden></span>
-            Desde 1999 movimentando cargas com seguranca
+            Desde 1999 movimentando cargas com segurança
           </Badge>
 
           <h1 id="hero-heading" className="text-balance text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
