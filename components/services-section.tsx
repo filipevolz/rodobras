@@ -128,7 +128,7 @@ export function ServicesSection() {
     <section id="servicos" className="bg-background py-20 lg:py-28" aria-labelledby="servicos-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">
-          <Badge variant="secondary" className="mb-4">Nossos Servicos</Badge>
+          <Badge variant="secondary" className="mb-4">Nossos Serviços</Badge>
           <h2 id="servicos-heading" className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Sua melhor contratação para serviços de{" "}
             <span className="text-accent">movimentação de cargas</span>
