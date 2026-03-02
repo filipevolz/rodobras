@@ -1,13 +1,13 @@
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
-import { basePath } from "@/lib/utils"
+import { basePath, cn } from "@/lib/utils"
 
 const clients = [
   { name: "Eletrobras Eletrosul", src: "/01.png" },
-  { name: "Petrobras", src: "/02.png" },
-  { name: "Tecnosolo", src: "/03.png" },
-  { name: "Celesc", src: "/05.png" },
-  { name: "Eletrobras Eletronuclear", src: "/07.png" },
+  { name: "Eletrobras Eletronuclear", src: "/02.png" },
+  { name: "Petrobras", src: "/03.png", darkFilter: "invert-only" as const },
+  { name: "Tecnosolo", src: "/05.png" },
+  { name: "Celesc", src: "/07.png" },
 ]
 
 export function ClientsSection() {
@@ -35,7 +35,12 @@ export function ClientsSection() {
                 alt={`Logo ${client.name}`}
                 width={120}
                 height={48}
-                className="h-12 w-auto max-w-[120px] object-contain grayscale transition-all hover:grayscale-0"
+                className={cn(
+                  "h-12 w-auto max-w-[120px] object-contain grayscale transition-all hover:grayscale-0",
+                  client.darkFilter === "invert-only"
+                    ? "dark:invert"
+                    : "dark:brightness-0 dark:invert"
+                )}
               />
             </li>
           ))}

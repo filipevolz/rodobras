@@ -88,7 +88,7 @@ export function ContactSection() {
                     Resposta rápida e atendimento personalizado. Envie as informações do seu projeto e receba um orçamento sem compromisso.
                   </p>
                 </div>
-                <Button asChild variant="outline" size="lg" className="w-full border-primary-foreground/20 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Button asChild variant="outline" size="lg" className="w-full border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground dark:border-accent-foreground/50 dark:bg-transparent dark:hover:bg-accent-foreground/20 dark:hover:border-accent-foreground/70">
                   <a href="https://wa.me/5548991582727" target="_blank">
                     <MessageCircle className="size-5" />
                     Iniciar Conversa

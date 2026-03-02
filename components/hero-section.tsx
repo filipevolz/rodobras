@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { basePath } from "@/lib/utils"
-import { ArrowRight, Shield, Clock, Truck } from "lucide-react"
+import { ArrowRight, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
@@ -15,15 +15,6 @@ export function HeroSection() {
           background: "radial-gradient(ellipse 80% 80% at 50% 50%, color-mix(in oklch, var(--primary) 18%, transparent) 0%, transparent 65%)",
         }}
       />
-      {/* Background pattern - decorativo, ignorado por leitores de tela */}
-      <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true">
-        <div
-          className="absolute inset-0 bg-[length:40px_40px]"
-          style={{
-            backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)",
-          }}
-        />
-      </div>
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center px-4 pb-16 pt-20 lg:flex-row lg:items-start lg:gap-16 lg:px-8 lg:pb-24 lg:pt-28">
         <div className="min-w-0 w-full flex-1 text-center lg:text-left">
@@ -39,7 +30,7 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-6 w-full max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground break-words lg:text-xl">
-            Locação de guindastes, muncks, transportes especiais e remoção de cargas. Atendemos com alcance de até 95 metros e capacidade de até 240 toneladas.
+            Locação de guindastes, muncks, transportes especiais e remoção de cargas. Atendemos com máquinas de elevado alcance e grande capacidade de carga.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
@@ -52,36 +43,18 @@ export function HeroSection() {
 
           </div>
 
-          {/* Stats - lista semântica */}
-          <ul className="mt-12 flex flex-wrap items-center justify-center gap-8 lg:justify-start" aria-label="Diferenciais">
-            <li className="flex items-center gap-3">
+          {/* Diferencial */}
+          <div className="mt-12 flex flex-wrap items-center justify-center lg:justify-start" aria-label="Diferencial">
+            <div className="flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10" aria-hidden="true">
                 <Shield className="size-5 text-primary" />
               </span>
               <span>
-                <span className="block text-sm font-bold text-foreground">+25 anos</span>
-                <span className="block text-xs text-muted-foreground">de experiência</span>
+                <span className="block text-sm font-bold text-foreground">+25 anos de experiência</span>
+                <span className="block text-xs text-muted-foreground">para integrar ao seu projeto</span>
               </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10" aria-hidden="true">
-                <Truck className="size-5 text-primary" />
-              </span>
-              <span>
-                <span className="block text-sm font-bold text-foreground">240 ton</span>
-                <span className="block text-xs text-muted-foreground">capacidade máxima</span>
-              </span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10" aria-hidden="true">
-                <Clock className="size-5 text-primary" />
-              </span>
-              <span>
-                <span className="block text-sm font-bold text-foreground">95 metros</span>
-                <span className="block text-xs text-muted-foreground">alcance máximo</span>
-              </span>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
         <figure className="mt-12 min-w-0 w-full flex-[1.2] lg:mt-0 lg:pt-20">

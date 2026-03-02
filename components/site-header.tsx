@@ -7,6 +7,7 @@ import { Menu, Phone } from "lucide-react"
 import { basePath } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -29,7 +30,7 @@ export function SiteHeader() {
             alt="Rodobras Guindastes"
             width={140}
             height={40}
-            className="h-9 w-auto"
+            className="h-9 w-auto dark:invert dark:[filter:invert(1)_hue-rotate(180deg)]"
             priority
           />
         </Link>
@@ -49,6 +50,7 @@ export function SiteHeader() {
 
         {/* CTA Desktop */}
         <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
           <a href="https://wa.me/5548991582727" target="_blank" title="(48) 99158-2727">
               <Phone className="size-4" />
@@ -60,13 +62,17 @@ export function SiteHeader() {
         {/* Mobile Menu */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="size-5" />
               <span className="sr-only">Abrir menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-72">
             <SheetTitle className="sr-only">Menu de navegacao</SheetTitle>
+            <div className="flex items-center justify-between mt-2 px-1">
+              <span className="text-sm font-medium text-muted-foreground">Tema</span>
+              <ThemeToggle />
+            </div>
             <nav className="mt-8 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link

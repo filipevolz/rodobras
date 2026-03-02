@@ -71,13 +71,15 @@ function ServiceCarousel({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-2 border-border bg-background/80 hover:bg-background" />
-        <CarouselNext className="right-2 border-border bg-background/80 hover:bg-background" />
+        <CarouselPrevious className="left-2 cursor-pointer border-border bg-background/80 hover:bg-background hover:text-foreground" />
+        <CarouselNext className="right-2 cursor-pointer border-border bg-background/80 hover:bg-background hover:text-foreground" />
       </Carousel>
       <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none" aria-hidden="true" />
-      <Badge className="absolute bottom-4 left-4 bg-accent text-accent-foreground z-10">
-        {badge}
-      </Badge>
+      {badge ? (
+        <Badge className="absolute bottom-4 left-4 bg-accent text-accent-foreground z-10">
+          {badge}
+        </Badge>
+      ) : null}
     </>
   )
 }
@@ -89,7 +91,7 @@ const services = [
     description: "Íçamentos de cargas pesadas ou delicadas a grandes alturas. Atendimentos com alcance de até 95 metros e capacidade de até 240 toneladas.",
     applications: ["Montagens de estruturas metálicas", "Íçamento de equipamentos", "Lançamento de caixas d'água", "Instalação de silos e caldeiras"],
     image: "/guindastes_rodobras-01.jpg",
-    badge: "Até 240 toneladas",
+    badge: "",
     carouselImages: guindastesCarouselImages,
   },
   {
@@ -98,7 +100,7 @@ const services = [
     description: "Guindastes articulados sobre caminhão com carroceria. Íçamentos, transporte, carga e descarga com o mesmo equipamento.",
     applications: ["Transporte com carga e descarga", "Íçamento e transporte de móveis", "Apoio em montagens de silos", "Retirada de veículos acidentados"],
     image: "/munks_rodobras-01.jpg",
-    badge: "Até 17 toneladas",
+    badge: "",
     carouselImages: munksCarouselImages,
   },
   {
@@ -158,9 +160,11 @@ export function ServicesSection() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none" aria-hidden="true" />
-                    <Badge className="absolute bottom-4 left-4 bg-accent text-accent-foreground z-10">
-                      {service.badge}
-                    </Badge>
+                    {service.badge ? (
+                      <Badge className="absolute bottom-4 left-4 bg-accent text-accent-foreground z-10">
+                        {service.badge}
+                      </Badge>
+                    ) : null}
                   </>
                 )}
               </div>

@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { basePath } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
+import { LocationsMap } from "@/components/locations-map-client"
 
 const footerLinks = {
   servicos: [
@@ -77,17 +78,7 @@ export function SiteFooter() {
               Localização
             </h4>
             <div className="overflow-hidden rounded-lg w-full">
-              <iframe
-                src="https://www.google.com/maps?q=Rodobras+Cranes+%26+Muncks+R+Paula+Ramos+702+Coqueiros+Florian%C3%B3polis+SC&output=embed"
-                width="400"
-                height="200"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização Rodobras Cranes & Muncks"
-                className="w-full max-w-full"
-              />
+              <LocationsMap />
             </div>
           </div>
         </div>
