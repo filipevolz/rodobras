@@ -59,21 +59,19 @@ export function SiteHeader() {
           </Button>
         </div>
 
-        {/* Mobile Menu */}
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="size-5" />
-              <span className="sr-only">Abrir menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-72">
-            <SheetTitle className="sr-only">Menu de navegacao</SheetTitle>
-            <div className="flex items-center justify-between mt-2 px-1">
-              <span className="text-sm font-medium text-muted-foreground">Tema</span>
-              <ThemeToggle />
-            </div>
-            <nav className="mt-8 flex flex-col gap-1">
+        {/* Mobile: tema no header + botão do menu */}
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="size-5" />
+                <span className="sr-only">Abrir menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72">
+              <SheetTitle className="sr-only">Menu de navegacao</SheetTitle>
+              <nav className="mt-8 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -93,8 +91,9 @@ export function SiteHeader() {
                 </Button>
               </div>
             </nav>
-          </SheetContent>
-        </Sheet>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   )
