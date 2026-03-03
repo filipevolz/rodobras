@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import { DeferredScripts } from '@/components/deferred-scripts'
+import { DeferredAnalytics } from '@/components/deferred-analytics'
 import './globals.css'
 
 const _inter = Inter({
@@ -51,12 +50,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
           <DeferredScripts />
-          <Analytics />
-          <SpeedInsights />
+          <DeferredAnalytics />
         </ThemeProvider>
       </body>
     </html>

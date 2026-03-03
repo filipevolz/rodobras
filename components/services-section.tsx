@@ -65,7 +65,7 @@ function ServiceCarousel({
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority={i === 0}
+                  loading="lazy"
                 />
               </div>
             </CarouselItem>
