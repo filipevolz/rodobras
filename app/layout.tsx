@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
-import { WhatsAppFloat } from '@/components/whatsapp-float'
+import { DeferredScripts } from '@/components/deferred-scripts'
 import './globals.css'
 
 const _inter = Inter({
@@ -53,8 +52,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
-          <WhatsAppFloat />
-          <Analytics />
+          <DeferredScripts />
         </ThemeProvider>
       </body>
     </html>

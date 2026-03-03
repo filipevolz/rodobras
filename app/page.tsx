@@ -1,7 +1,10 @@
 import dynamic from "next/dynamic"
-import { SiteHeader } from "@/components/site-header"
 import { HeroSection } from "@/components/hero-section"
 
+const SiteHeader = dynamic(
+  () => import("@/components/site-header").then((m) => m.SiteHeader),
+  { ssr: true }
+)
 const ServicesSection = dynamic(
   () => import("@/components/services-section").then((m) => m.ServicesSection),
   { ssr: true }
