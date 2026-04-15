@@ -52,7 +52,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
           <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
-          <a href="https://wa.me/554832852727" target="_blank" title="(48) 3285-2727">
+            <a href="https://wa.me/5548991582727" target="_blank" title="(48) 3285-2727">
               <Phone className="size-4" />
               Entre em contato
             </a>

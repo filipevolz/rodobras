@@ -92,7 +92,7 @@ export function SiteFooter() {
             </p>
             <nav className="flex items-center gap-6" aria-label="Contato">
               <a
-                href="tel:+554832852727"
+                href="tel:+5548991582727"
                 className="text-xs text-primary-foreground transition-colors hover:text-primary-foreground hover:underline"
               >
                 (48) 3285-2727

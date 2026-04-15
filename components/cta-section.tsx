@@ -20,7 +20,7 @@ export function CtaSection() {
         <div className="flex flex-col items-center gap-4 sm:flex-row">
 
           <Button asChild variant="outline" size="lg" className="border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground dark:border-accent-foreground/50 dark:bg-transparent dark:hover:bg-accent-foreground/20 dark:hover:border-accent-foreground/70">
-            <a href="https://wa.me/554832852727" target="_blank" title="(48) 3285-2727">
+            <a href="https://wa.me/5548991582727" target="_blank" title="(48) 3285-2727">
               Solicite um Orçamento
               <ArrowRight className="size-4" />
             </a>
