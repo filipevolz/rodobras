@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { basePath } from "@/lib/utils"
 
-const WHATSAPP_URL = "https://wa.me/554832852727"
+const WHATSAPP_URL = "https://wa.me/5548991582727"
 const WHATSAPP_LABEL = "Contato WhatsApp Rodobras"
 
 export function WhatsAppFloat() {
