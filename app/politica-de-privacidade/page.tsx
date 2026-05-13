@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { basePath } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -31,13 +30,11 @@ export const metadata: Metadata = {
     description: politicaDescription,
     url: "/politica-de-privacidade",
     type: "article",
-    images: [{ url: `${basePath}/icon.svg`, width: 512, height: 512, alt: "Rodobras Guindastes" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Política de Privacidade | Rodobras Guindastes",
     description: politicaDescription,
-    images: [`${basePath}/icon.svg`],
   },
 }
 

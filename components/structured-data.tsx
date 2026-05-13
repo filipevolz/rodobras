@@ -1,40 +1,61 @@
+import { BUSINESS, getSocialSameAs } from '@/lib/business'
 import { getPublicSiteRoot } from '@/lib/site'
 import { basePath } from '@/lib/utils'
 
 export function StructuredData() {
   const siteUrl = getPublicSiteRoot()
   const logoUrl = `${siteUrl}${basePath}/icon.svg`
+  const sameAs = getSocialSameAs()
+
+  const states = new Set(['Santa Catarina', 'Rio de Janeiro'])
+  const areaServed = BUSINESS.areaServedNames.map((name) => ({
+    '@type': states.has(name) ? 'State' : 'City',
+    name,
+  }))
 
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Organization',
-        '@id': `${siteUrl}/#organization`,
-        name: 'Rodobras Guindastes & Muncks LTDA',
-        legalName: 'Rodobras Guindastes & Muncks LTDA',
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}/#business`,
+        name: BUSINESS.tradeName,
+        legalName: BUSINESS.legalName,
         url: siteUrl,
         logo: { '@type': 'ImageObject', url: logoUrl },
-        email: 'adm@rodobrasguindastes.com.br',
+        image: logoUrl,
+        email: BUSINESS.emailPublic,
+        telephone: BUSINESS.telephoneE164,
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'customer service',
+            telephone: BUSINESS.whatsappE164,
+            availableLanguage: ['Portuguese', 'pt-BR'],
+            areaServed: 'BR',
+          },
+        ],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Rua Paula Ramos, 702, Sala 1601, Coqueiros',
-          addressLocality: 'Florianópolis',
-          addressRegion: 'SC',
-          postalCode: '88080-401',
-          addressCountry: 'BR',
+          streetAddress: BUSINESS.streetAddress,
+          addressLocality: BUSINESS.addressLocality,
+          addressRegion: BUSINESS.addressRegion,
+          postalCode: BUSINESS.postalCode,
+          addressCountry: BUSINESS.addressCountry,
         },
-        sameAs: [] as string[],
+        areaServed,
+        ...(sameAs.length ? { sameAs } : {}),
+        priceRange: '$$',
       },
       {
         '@type': 'WebSite',
         '@id': `${siteUrl}/#website`,
         url: siteUrl,
-        name: 'Rodobras Guindastes',
+        name: BUSINESS.tradeName,
         description:
-          'Locação de guindastes, muncks, carretas rebaixadas e serviços de remoção de cargas pesadas em Santa Catarina.',
+          'Locação de guindastes, muncks, carretas rebaixadas e serviços de remoção de cargas pesadas em Santa Catarina e Rio de Janeiro.',
         inLanguage: 'pt-BR',
-        publisher: { '@id': `${siteUrl}/#organization` },
+        publisher: { '@id': `${siteUrl}/#business` },
       },
     ],
   }

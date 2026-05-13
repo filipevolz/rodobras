@@ -66,13 +66,11 @@ export const metadata: Metadata = {
     siteName: 'Rodobras Guindastes',
     title: defaultTitle,
     description: defaultDescription,
-    images: [{ url: `${basePath}/icon.svg`, width: 512, height: 512, alt: 'Rodobras Guindastes' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: defaultTitle,
     description: defaultDescription,
-    images: [`${basePath}/icon.svg`],
   },
 }
 
