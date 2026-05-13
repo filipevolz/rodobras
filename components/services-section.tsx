@@ -66,6 +66,7 @@ function ServiceCarousel({
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </CarouselItem>
@@ -158,6 +159,8 @@ export function ServicesSection() {
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none" aria-hidden="true" />
                     {service.badge ? (

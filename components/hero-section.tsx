@@ -70,6 +70,7 @@ export function HeroSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
                 fetchPriority="high"
+                decoding="async"
               />
           </div>
         </figure>

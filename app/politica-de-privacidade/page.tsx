@@ -1,12 +1,15 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { basePath } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
+const politicaDescription =
+  "Política de Privacidade da Rodobras Guindastes & Muncks. Conheça como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD."
+
 export const metadata: Metadata = {
-  title: "Política de Privacidade | Rodobras Guindastes & Muncks",
-  description:
-    "Política de Privacidade da Rodobras Guindastes & Muncks. Conheça como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD.",
+  title: "Política de Privacidade",
+  description: politicaDescription,
   keywords: [
     "guindastes",
     "muncks",
@@ -20,6 +23,22 @@ export const metadata: Metadata = {
     "Biguaçu",
     "Santa Catarina",
   ],
+  alternates: {
+    canonical: "/politica-de-privacidade",
+  },
+  openGraph: {
+    title: "Política de Privacidade | Rodobras Guindastes",
+    description: politicaDescription,
+    url: "/politica-de-privacidade",
+    type: "article",
+    images: [{ url: `${basePath}/icon.svg`, width: 512, height: 512, alt: "Rodobras Guindastes" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Política de Privacidade | Rodobras Guindastes",
+    description: politicaDescription,
+    images: [`${basePath}/icon.svg`],
+  },
 }
 
 export default function PoliticaDePrivacidadePage() {

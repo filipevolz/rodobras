@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { DeferredScripts } from '@/components/deferred-scripts'
 import { DeferredAnalytics } from '@/components/deferred-analytics'
+import { StructuredData } from '@/components/structured-data'
+import { getMetadataBase } from '@/lib/site'
+import { basePath } from '@/lib/utils'
 import './globals.css'
 
 const _inter = Inter({
@@ -11,13 +14,21 @@ const _inter = Inter({
   display: 'swap',
 })
 
+const defaultTitle = 'Rodobras Guindastes | Locação de Guindastes e Muncks'
+const defaultDescription =
+  'Locação de guindastes, muncks, carretas rebaixadas e serviços de remoção de cargas pesadas. Atendemos Florianópolis (Coqueiros, Via Expressa, Norte da Ilha), São José, Palhoça e Biguaçu. Soluções integradas para qualquer porte de projeto desde 1999.'
+
 export const metadata: Metadata = {
-  title: 'Rodobras Guindastes | Locação de Guindastes e Muncks',
-  icons: {
-    icon: '/favicon.ico',
+  metadataBase: getMetadataBase(),
+  title: {
+    default: defaultTitle,
+    template: '%s | Rodobras Guindastes',
   },
-  description:
-    'Locação de guindastes, muncks, carretas rebaixadas e serviços de remoção de cargas pesadas. Atendemos Florianópolis (Coqueiros, Via Expressa, Norte da Ilha), São José, Palhoça e Biguaçu. Soluções integradas para qualquer porte de projeto desde 1999.',
+  icons: {
+    icon: [{ url: `${basePath}/icon.svg`, type: 'image/svg+xml' }],
+    apple: `${basePath}/icon.svg`,
+  },
+  description: defaultDescription,
   keywords: [
     'guindastes',
     'muncks',
@@ -35,6 +46,34 @@ export const metadata: Metadata = {
     'Palhoça',
     'Biguaçu',
   ],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: '/',
+    siteName: 'Rodobras Guindastes',
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [{ url: `${basePath}/icon.svg`, width: 512, height: 512, alt: 'Rodobras Guindastes' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [`${basePath}/icon.svg`],
+  },
 }
 
 export const viewport: Viewport = {
@@ -55,6 +94,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="font-sans antialiased">
+        <StructuredData />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
           <DeferredScripts />
