@@ -25,11 +25,8 @@ export const metadata: Metadata = {
     template: '%s | Rodobras Guindastes',
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
-      { url: `${basePath}/icon.svg`, type: 'image/svg+xml' },
-    ],
-    apple: `${basePath}/icon.svg`,
+    icon: [{ url: `${basePath}/rodobras-marca.png`, sizes: '312x312', type: 'image/png' }],
+    apple: `${basePath}/rodobras-marca.png`,
   },
   description: defaultDescription,
   keywords: [

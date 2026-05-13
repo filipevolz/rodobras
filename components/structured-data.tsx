@@ -4,7 +4,7 @@ import { basePath } from '@/lib/utils'
 
 export function StructuredData() {
   const siteUrl = getPublicSiteRoot()
-  const logoUrl = `${siteUrl}${basePath}/icon.svg`
+  const logoUrl = `${siteUrl}${basePath}/rodobras-marca.png`
   const sameAs = getSocialSameAs()
 
   const states = new Set(['Santa Catarina', 'Rio de Janeiro'])

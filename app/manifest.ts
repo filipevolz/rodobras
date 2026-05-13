@@ -14,9 +14,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#1a2744',
     icons: [
       {
-        src: `${basePath}/icon.svg`,
-        sizes: 'any',
-        type: 'image/svg+xml',
+        src: `${basePath}/rodobras-marca.png`,
+        sizes: '312x312',
+        type: 'image/png',
         purpose: 'any',
       },
     ],
