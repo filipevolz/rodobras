@@ -3,7 +3,8 @@ import { createShareImageResponse, ogImageAlt, ogImageSize } from '@/lib/og-imag
 export const alt = ogImageAlt
 export const size = ogImageSize
 export const contentType = 'image/png'
+export const runtime = 'nodejs'
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
   return createShareImageResponse()
 }
