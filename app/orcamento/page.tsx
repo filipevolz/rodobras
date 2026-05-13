@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'WhatsApp',
   ],
   alternates: {
-    canonical: '/orcamento',
+    canonical: '/orcamento/',
   },
   openGraph: {
     title: 'Solicitar orçamento | Rodobras Guindastes',
     description,
-    url: '/orcamento',
+    url: '/orcamento/',
     type: 'website',
   },
   twitter: {

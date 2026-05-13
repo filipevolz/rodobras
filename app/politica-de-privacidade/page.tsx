@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     "Santa Catarina",
   ],
   alternates: {
-    canonical: "/politica-de-privacidade",
+    canonical: "/politica-de-privacidade/",
   },
   openGraph: {
     title: "Política de Privacidade | Rodobras Guindastes",
     description: politicaDescription,
-    url: "/politica-de-privacidade",
+    url: "/politica-de-privacidade/",
     type: "article",
   },
   twitter: {

@@ -64,7 +64,7 @@ export function buildOrcamentoWhatsAppMessage(data: OrcamentoFormValues): string
     '*Descrição do pedido*',
     data.descricao,
     '',
-    '*Medidas e carga (quando souber)*',
+    '*Medidas e carga*',
     linha('Peso estimado', data.peso),
     linha('Altura', data.altura),
     linha('Raio / alcance', data.raio),

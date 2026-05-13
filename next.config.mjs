@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  /** Alinha com URLs finais do Google Ads (ex.: /orcamento/). */
+  trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -22,6 +24,16 @@ const nextConfig = {
       "@radix-ui/react-tabs",
       "@radix-ui/react-tooltip",
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'rodobrasguindastes.com.br' }],
+        destination: 'https://www.rodobrasguindastes.com.br/:path*',
+        permanent: true,
+      },
+    ]
   },
   async headers() {
     return [
