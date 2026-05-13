@@ -16,5 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+    {
+      url: absolutePageUrl('/orcamento'),
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
   ]
 }
