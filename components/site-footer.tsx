@@ -6,15 +6,15 @@ import { LocationsMap } from "@/components/locations-map-client"
 
 const footerLinks = {
   servicos: [
-    { label: "Locação de Guindastes", href: "#servicos" },
-    { label: "Locação de Muncks", href: "#servicos" },
-    { label: "Remoções de Cargas", href: "#servicos" },
-    { label: "Transportes Especiais", href: "#servicos" },
+    { label: "Locação de Guindastes", href: "#products" },
+    { label: "Locação de Muncks", href: "#products" },
+    { label: "Remoções de Cargas", href: "#products" },
+    { label: "Transportes Especiais", href: "#products" },
   ],
   empresa: [
-    { label: "Sobre Nós", href: "#sobre" },
+    { label: "Sobre Nós", href: "#about" },
     { label: "Clientes", href: "#clientes" },
-    { label: "Contato", href: "#contato" },
+    { label: "Contato", href: "#contact" },
     { label: "Política de Privacidade", href: "/politica-de-privacidade" },
   ],
 }

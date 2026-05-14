@@ -126,7 +126,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="bg-background py-20 lg:py-28" aria-labelledby="servicos-heading">
+    <section id="products" className="bg-background py-20 lg:py-28" aria-labelledby="servicos-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">
           <Badge variant="secondary" className="mb-4">Nossos Serviços</Badge>

@@ -26,7 +26,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="bg-background py-12 md:py-16 lg:py-28" aria-labelledby="sobre-heading">
+    <section id="about" className="bg-background py-12 md:py-16 lg:py-28" aria-labelledby="sobre-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mb-4 md:mb-8 flex justify-center">
           <Badge variant="secondary">Sobre Nos</Badge>

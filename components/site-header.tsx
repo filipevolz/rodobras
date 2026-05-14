@@ -11,10 +11,10 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#sobre", label: "Sobre" },
+  { href: "#products", label: "Serviços" },
+  { href: "#about", label: "Sobre" },
   { href: "#clientes", label: "Clientes" },
-  { href: "#contato", label: "Contato" },
+  { href: "#contact", label: "Contato" },
 ]
 
 export function SiteHeader() {
