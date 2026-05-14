@@ -1,11 +1,6 @@
 "use client"
 
-import dynamic from "next/dynamic"
-
-const WhatsAppFloat = dynamic(
-  () => import("@/components/whatsapp-float").then((m) => m.WhatsAppFloat),
-  { ssr: false }
-)
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 
 export function DeferredScripts() {
   return <WhatsAppFloat />

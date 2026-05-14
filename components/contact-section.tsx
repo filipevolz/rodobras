@@ -4,6 +4,9 @@ import { basePath } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { getWhatsAppMeHref, SITE_HOME_WHATSAPP_PREFILL } from "@/lib/whatsapp-links"
+
+const whatsAppComMensagemHref = getWhatsAppMeHref(SITE_HOME_WHATSAPP_PREFILL)
 
 const contactInfo = [
   {
@@ -16,7 +19,7 @@ const contactInfo = [
     icon: MessageCircle,
     label: "WhatsApp",
     value: "(48) 3285-2727",
-    href: "https://wa.me/5548991582727",
+    href: whatsAppComMensagemHref,
   },
   {
     icon: Mail,
@@ -89,7 +92,7 @@ export function ContactSection() {
                   </p>
                 </div>
                 <Button asChild variant="outline" size="lg" className="w-full border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground dark:border-accent-foreground/50 dark:bg-transparent dark:hover:bg-accent-foreground/20 dark:hover:border-accent-foreground/70">
-                  <a href="https://wa.me/5548991582727" target="_blank">
+                  <a href={whatsAppComMensagemHref} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="size-5" />
                     Iniciar Conversa
                   </a>

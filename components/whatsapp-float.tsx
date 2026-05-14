@@ -1,14 +1,19 @@
-import Link from "next/link"
-import Image from "next/image"
-import { basePath } from "@/lib/utils"
+"use client"
 
-const WHATSAPP_URL = "https://wa.me/5548991582727"
+import Image from "next/image"
+import { usePathname } from "next/navigation"
+import { basePath } from "@/lib/utils"
+import { getWhatsAppCtaHref } from "@/lib/whatsapp-links"
+
 const WHATSAPP_LABEL = "Contato WhatsApp Rodobras"
 
 export function WhatsAppFloat() {
+  const pathname = usePathname()
+  const href = getWhatsAppCtaHref(pathname)
+
   return (
-    <Link
-      href={WHATSAPP_URL}
+    <a
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={WHATSAPP_LABEL}
@@ -23,6 +28,6 @@ export function WhatsAppFloat() {
         className="size-full object-contain brightness-0 invert"
         aria-hidden
       />
-    </Link>
+    </a>
   )
 }

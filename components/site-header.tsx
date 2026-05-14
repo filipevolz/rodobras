@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, Phone } from "lucide-react"
@@ -8,6 +9,7 @@ import { basePath } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { getWhatsAppCtaHref } from "@/lib/whatsapp-links"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -19,6 +21,8 @@ const navLinks = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  const whatsappHref = getWhatsAppCtaHref(pathname)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -52,7 +56,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
           <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <a href="https://wa.me/5548991582727" target="_blank" title="(48) 3285-2727">
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" title="(48) 3285-2727">
               <Phone className="size-4" />
               Entre em contato
             </a>
@@ -84,7 +88,7 @@ export function SiteHeader() {
               ))}
               <div className="mt-4 px-4">
                 <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  <a href="https://wa.me/5548991582727" target="_blank" title="(48) 3285-2727">
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer" title="(48) 3285-2727">
                     <Phone className="size-4" />
                     Entre em contato
                   </a>
