@@ -68,9 +68,9 @@ export function ContactSection() {
                     className="flex w-full min-w-0"
                   >
                     <Card className="flex min-h-[6.75rem] w-full flex-col border-border/60 transition-all hover:border-accent/40 hover:shadow-md sm:min-h-[7rem]">
-                      <CardContent className="flex flex-1 items-center gap-4 py-4">
+                      <CardContent className="flex flex-1 items-start gap-4 py-4">
                         <span
-                          className="flex size-10 shrink-0 items-center justify-center self-start rounded-lg bg-primary/10 sm:self-center"
+                          className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10"
                           aria-hidden="true"
                         >
                           <info.icon className="size-5 text-primary" />
@@ -79,7 +79,7 @@ export function ContactSection() {
                           <span className="block text-left text-xs font-medium tracking-wider text-muted-foreground">
                             {info.label}
                           </span>
-                          <span className="mt-1 block min-h-[2.75rem] text-pretty text-left text-sm font-semibold leading-snug text-foreground">
+                          <span className="mt-1 block text-pretty text-left text-sm font-semibold leading-snug text-foreground">
                             {info.value}
                           </span>
                         </span>
