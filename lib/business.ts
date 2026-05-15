@@ -25,11 +25,22 @@ export const BUSINESS = {
   ] as const,
 } as const
 
+export const SOCIAL_PROFILES = [
+  {
+    platform: 'instagram',
+    label: 'Instagram',
+    href: 'https://www.instagram.com/rodobrasguindastes/',
+    handle: '@rodobrasguindastes',
+  },
+] as const
+
 export function getSocialSameAs(): string[] {
+  const fromConfig = SOCIAL_PROFILES.map((p) => p.href)
   const raw = process.env.NEXT_PUBLIC_SOCIAL_PROFILES?.trim()
-  if (!raw) return []
-  return raw
+  if (!raw) return fromConfig
+  const fromEnv = raw
     .split(/[\n,]+/)
     .map((s) => s.trim())
     .filter(Boolean)
+  return [...new Set([...fromConfig, ...fromEnv])]
 }

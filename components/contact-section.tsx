@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { getWhatsAppMeHref, SITE_HOME_WHATSAPP_PREFILL } from "@/lib/whatsapp-links"
+import { SocialLinks } from "@/components/social-links"
 
 const whatsAppComMensagemHref = getWhatsAppMeHref(SITE_HOME_WHATSAPP_PREFILL)
 
@@ -69,6 +70,11 @@ export function ContactSection() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Redes sociais</p>
+              <SocialLinks className="mt-3 justify-center lg:justify-start" variant="text" iconClassName="text-primary" />
+            </div>
           </div>
 
           <aside className="w-full max-w-md flex-1" aria-label="Chamar no WhatsApp">
