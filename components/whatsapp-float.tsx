@@ -6,7 +6,7 @@ import { basePath } from "@/lib/utils"
 import { getWhatsAppCtaHref } from "@/lib/whatsapp-links"
 import { WHATSAPP_ICON_ALT } from "@/lib/seo"
 
-const WHATSAPP_LABEL = "Contato WhatsApp Rodobras"
+const WHATSAPP_LABEL = "Contato whatsapp Rodobras"
 
 export function WhatsAppFloat() {
   const pathname = usePathname()

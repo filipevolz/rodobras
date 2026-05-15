@@ -6,4 +6,4 @@ export const SITE_DEFAULT_TITLE = 'Rodobras Guindastes | Locação de guindastes
 
 export const LOGO_ALT = 'Logotipo Rodobras Guindastes — locação de guindastes e muncks'
 
-export const WHATSAPP_ICON_ALT = 'Ícone do WhatsApp — fale com a Rodobras Guindastes'
+export const WHATSAPP_ICON_ALT = 'Ícone do whatsapp — fale com a Rodobras Guindastes'

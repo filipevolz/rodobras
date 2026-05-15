@@ -6,7 +6,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { OrcamentoForm } from '@/components/orcamento-form'
 
 const description =
-  'Solicite orçamento de locação de guindastes, muncks, remoções e transportes especiais. Preencha o formulário e envie pelo WhatsApp para a Rodobras Guindastes.'
+  'Solicite orçamento de locação de guindastes, muncks, remoções e transportes especiais. Preencha o formulário e envie pelo whatsapp para a Rodobras Guindastes.'
 
 export const metadata: Metadata = {
   title: 'Solicitar orçamento',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'locação',
     'Florianópolis',
     'Santa Catarina',
-    'WhatsApp',
+    'whatsapp',
   ],
   alternates: alternatesForPath('/orcamento'),
   openGraph: {

@@ -19,7 +19,7 @@ const contactInfo = [
   },
   {
     icon: MessageCircle,
-    label: "WhatsApp",
+    label: "Whatsapp",
     value: "(48) 3285-2727",
     href: whatsAppComMensagemHref,
   },
@@ -78,7 +78,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <aside className="w-full max-w-md flex-1" aria-label="Chamar no WhatsApp">
+          <aside className="w-full max-w-md flex-1" aria-label="Chamar no whatsapp">
             <Card className="overflow-hidden border-0 bg-primary justify-between">
               <CardContent className="flex flex-col items-center gap-6 px-8 lg:pb-18 lg:pt-6 py-8 text-center">
                 <span className="flex size-20 items-center justify-center" aria-hidden="true">
@@ -92,7 +92,7 @@ export function ContactSection() {
                 </span>
                 <div>
                   <h3 className="text-2xl font-bold text-primary-foreground">
-                    Fale conosco pelo WhatsApp
+                    Fale conosco pelo whatsapp
                   </h3>
                   <p className="mt-3 text-primary-foreground leading-relaxed">
                     Resposta rápida e atendimento personalizado. Envie as informações do seu projeto e receba um orçamento sem compromisso.
