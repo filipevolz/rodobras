@@ -122,45 +122,46 @@ export function OrcamentoForm() {
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <FormField
-              control={control}
-              name="nome"
-              render={({ field }) => (
-                <FormItem className="max-w-md">
-                  <FormLabel>Nome</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Seu nome" autoComplete="name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
             <div className="space-y-4">
-              <FormField
-                control={control}
-                name="tipoServico"
-                render={({ field }) => (
-                  <FormItem className="max-w-md">
-                    <FormLabel>Tipo de serviço</FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value}>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <FormField
+                  control={control}
+                  name="nome"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Nome</FormLabel>
                       <FormControl>
-                        <SelectTrigger className="w-full min-w-0">
-                          <SelectValue placeholder="Selecione o serviço" />
-                        </SelectTrigger>
+                        <Input placeholder="Seu nome" autoComplete="name" {...field} />
                       </FormControl>
-                      <SelectContent>
-                        {tipoServicoValues.map((value) => (
-                          <SelectItem key={value} value={value}>
-                            {tipoServicoLabels[value]}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={control}
+                  name="tipoServico"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Tipo de serviço</FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="w-full min-w-0">
+                            <SelectValue placeholder="Selecione o serviço" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {tipoServicoValues.map((value) => (
+                            <SelectItem key={value} value={value}>
+                              {tipoServicoLabels[value]}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
               <FormField
                 control={control}
                 name="descricao"
