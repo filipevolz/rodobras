@@ -6,10 +6,10 @@ export const tipoServicoValues = ['guindastes', 'muncks', 'remocoes', 'transport
 export type TipoServico = (typeof tipoServicoValues)[number]
 
 export const tipoServicoLabels: Record<TipoServico, string> = {
-  guindastes: 'Locação de Guindastes',
-  muncks: 'Locação de Muncks',
-  remocoes: 'Remoções de Cargas',
-  transportes: 'Transportes Especiais',
+  guindastes: 'Locação de guindastes',
+  muncks: 'Locação de muncks',
+  remocoes: 'Remoções de cargas',
+  transportes: 'Transportes especiais',
   outro: 'Outro / não sei informar',
 }
 
@@ -25,6 +25,9 @@ export const orcamentoFormSchema = z.object({
     .trim()
     .min(2, 'Informe seu nome (mínimo 2 caracteres).')
     .max(120, 'Máximo de 120 caracteres.'),
+  nomeCarga: optionalMedida,
+  quantidade: optionalMedida,
+  valorTotal: optionalMedida,
   tipoServico: z.enum(tipoServicoValues, {
     message: 'Selecione o tipo de serviço.',
   }),
@@ -34,10 +37,14 @@ export const orcamentoFormSchema = z.object({
     .min(20, 'Descreva o pedido com pelo menos 20 caracteres.')
     .max(2000, 'Máximo de 2000 caracteres.'),
   peso: optionalMedida,
-  altura: optionalMedida,
-  raio: optionalMedida,
-  comprimento: optionalMedida,
   largura: optionalMedida,
+  comprimento: optionalMedida,
+  altura: optionalMedida,
+  alturaElevacao: optionalMedida,
+  afastamentoGuindaste: optionalMedida,
+  alturaObstaculo: optionalMedida,
+  raio: optionalMedida,
+  recuo: optionalMedida,
   outrasInformacoes: z
     .string()
     .max(3000, 'Máximo de 3000 caracteres.')
@@ -55,6 +62,21 @@ function linha(label: string, valor: string | undefined): string {
 /** Texto formatado para colar no WhatsApp (UTF-8). */
 export function buildOrcamentoWhatsAppMessage(data: OrcamentoFormValues): string {
   const tipo = tipoServicoLabels[data.tipoServico]
+  const medidas = [
+    linha('Nome da carga', data.nomeCarga),
+    linha('Quantidade', data.quantidade),
+    data.valorTotal ? linha('Valor total (R$)', `R$ ${data.valorTotal}`) : '',
+    linha('Peso (kg)', data.peso),
+    linha('Largura (m)', data.largura),
+    linha('Comprimento (m)', data.comprimento),
+    linha('Altura (m)', data.altura),
+    linha('E — Altura de elevação (m)', data.alturaElevacao),
+    linha('A — Afastamento do guindaste (m)', data.afastamentoGuindaste),
+    linha('B — Altura do obstáculo (m)', data.alturaObstaculo),
+    linha('R — Raio', data.raio),
+    linha('D — Recuo (m)', data.recuo),
+  ].filter(Boolean)
+
   const partes = [
     '*Orçamento — Rodobras Guindastes*',
     '',
@@ -64,12 +86,7 @@ export function buildOrcamentoWhatsAppMessage(data: OrcamentoFormValues): string
     '*Descrição do pedido*',
     data.descricao,
     '',
-    '*Medidas e carga*',
-    linha('Peso estimado', data.peso),
-    linha('Altura', data.altura),
-    linha('Raio / alcance', data.raio),
-    linha('Comprimento', data.comprimento),
-    linha('Largura', data.largura),
+    medidas.length ? ['*Medidas e carga*', ...medidas].join('\n') : '',
     data.outrasInformacoes
       ? ['', '*Outras informações*', data.outrasInformacoes].join('\n')
       : '',

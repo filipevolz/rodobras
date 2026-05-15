@@ -4,7 +4,7 @@ import { basePath } from '@/lib/utils'
 export default function manifest(): MetadataRoute.Manifest {
   const start = basePath ? `${basePath}/` : '/'
   return {
-    name: 'Rodobras Guindastes | Locação de Guindastes e Muncks',
+    name: 'Rodobras Guindastes | Locação de guindastes e muncks',
     short_name: 'Rodobras',
     description:
       'Locação de guindastes, muncks, transportes especiais e remoção de cargas. Atendimento em Santa Catarina desde 1999.',

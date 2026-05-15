@@ -80,7 +80,6 @@ export async function createShareImageResponse(): Promise<ImageResponse> {
                   color: '#ffffff',
                   lineHeight: 1.08,
                   letterSpacing: '-0.02em',
-                  textTransform: 'uppercase',
                   textShadow: '0 2px 18px rgba(0,0,0,0.2)',
                 }}
               >

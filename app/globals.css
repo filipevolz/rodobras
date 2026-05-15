@@ -126,6 +126,20 @@
   }
 }
 
+/* Diagrama de içamento (/orcamento) */
+.load-diagram {
+  --load-ink: #3a4044;
+  --load-accent: #e59501;
+  --load-on-ink: #f9f9f9;
+  --load-stroke-on-ink: #ffffff;
+}
+
+.dark .load-diagram {
+  --load-ink: var(--foreground);
+  --load-on-ink: var(--card);
+  --load-stroke-on-ink: var(--border);
+}
+
 /* Marcadores customizados do mapa Leaflet (evita ícone quebrado) */
 .rodobras-marker.leaflet-marker-icon {
   background: transparent !important;

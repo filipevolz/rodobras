@@ -31,7 +31,7 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: "Atuacao",
+    label: "Atuação",
     value: "SC e RJ",
     href: "#",
   },
@@ -62,7 +62,7 @@ export function ContactSection() {
                           <info.icon className="size-5 text-primary" />
                         </span>
                         <span className="min-w-0">
-                          <span className="block text-xs text-left font-medium uppercase tracking-wider text-muted-foreground">{info.label}</span>
+                          <span className="block text-xs text-left font-medium tracking-wider text-muted-foreground">{info.label}</span>
                           <span className="block truncate text-left text-sm font-semibold text-foreground">{info.value}</span>
                         </span>
                       </CardContent>
@@ -73,7 +73,7 @@ export function ContactSection() {
             </ul>
 
             <div className="mt-8">
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Redes sociais</p>
+              <p className="text-xs font-medium tracking-wider text-muted-foreground">Redes sociais</p>
               <SocialLinks className="mt-3 justify-center lg:justify-start" variant="text" iconClassName="text-primary" />
             </div>
           </div>
@@ -101,7 +101,7 @@ export function ContactSection() {
                 <Button asChild variant="outline" size="lg" className="w-full border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground dark:border-accent-foreground/50 dark:bg-transparent dark:hover:bg-accent-foreground/20 dark:hover:border-accent-foreground/70">
                   <a href={whatsAppComMensagemHref} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="size-5" />
-                    Iniciar Conversa
+                    Iniciar conversa
                   </a>
                 </Button>
               </CardContent>

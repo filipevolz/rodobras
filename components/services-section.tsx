@@ -88,7 +88,7 @@ function ServiceCarousel({
 const services = [
   {
     icon: Container,
-    title: "Locação de Guindastes",
+    title: "Locação de guindastes",
     description: "Íçamentos de cargas pesadas ou delicadas a grandes alturas. Atendimentos com alcance de até 95 metros e capacidade de até 240 toneladas.",
     applications: ["Montagens de estruturas metálicas", "Íçamento de equipamentos", "Lançamento de caixas d'água", "Instalação de silos e caldeiras"],
     image: "/guindastes_rodobras-01.jpg",
@@ -97,7 +97,7 @@ const services = [
   },
   {
     icon: Truck,
-    title: "Locação de Muncks",
+    title: "Locação de muncks",
     description: "Guindastes articulados sobre caminhão com carroceria. Íçamentos, transporte, carga e descarga com o mesmo equipamento.",
     applications: ["Transporte com carga e descarga", "Íçamento e transporte de móveis", "Apoio em montagens de silos", "Retirada de veículos acidentados"],
     image: "/munks_rodobras-01.jpg",
@@ -106,7 +106,7 @@ const services = [
   },
   {
     icon: PackageOpen,
-    title: "Remoções de Cargas",
+    title: "Remoções de cargas",
     description: "Remoção em ambiente fechado de cargas pesadas ou delicadas. Movimentação vertical e horizontal de máquinas e equipamentos.",
     applications: ["Movimentação de injetoras e extrusoras", "Máquinas gráficas em indústrias", "Descida e subida por escadas", "Ambientes de difícil acesso"],
     image: "/remocoes_rodobras-01.jpg",
@@ -115,7 +115,7 @@ const services = [
   },
   {
     icon: Route,
-    title: "Transportes Especiais",
+    title: "Transportes especiais",
     description: "Transportes de máquinas e demais cargas com excessos de peso, altura, comprimento ou largura. Operação sob condições especiais.",
     applications: ["Pranchas rebaixadas e extensivas", "Escolta credenciada", "Autorização de órgãos de trânsito", "Cargas de longa distância"],
     image: "/transportes-especiais_rodobras-01.jpg",
@@ -129,7 +129,7 @@ export function ServicesSection() {
     <section id="products" className="bg-background py-20 lg:py-28" aria-labelledby="servicos-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">
-          <Badge variant="secondary" className="mb-4">Nossos Serviços</Badge>
+          <Badge variant="secondary" className="mb-4">Nossos serviços</Badge>
           <h2 id="servicos-heading" className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Sua melhor contratação para serviços de{" "}
             <span className="text-accent">movimentação de cargas</span>
@@ -185,7 +185,7 @@ export function ServicesSection() {
               </CardHeader>
 
               <CardContent>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                <p className="mb-3 text-xs font-semibold tracking-wider text-muted-foreground">
                   Aplicações
                 </p>
                 <ul className="grid grid-cols-2 gap-2">

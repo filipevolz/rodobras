@@ -5,10 +5,10 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
 const politicaDescription =
-  "Política de Privacidade da Rodobras Guindastes & Muncks. Conheça como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD."
+  "Política de privacidade da Rodobras Guindastes & Muncks. Conheça como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD."
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade",
+  title: "Política de privacidade",
   description: politicaDescription,
   keywords: [
     "guindastes",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   ],
   alternates: alternatesForPath("/politica-de-privacidade"),
   openGraph: {
-    title: "Política de Privacidade | Rodobras Guindastes",
+    title: "Política de privacidade | Rodobras Guindastes",
     description: politicaDescription,
     url: "/politica-de-privacidade/",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Política de Privacidade | Rodobras Guindastes",
+    title: "Política de privacidade | Rodobras Guindastes",
     description: politicaDescription,
   },
 }
@@ -51,7 +51,7 @@ export default function PoliticaDePrivacidadePage() {
               ← Voltar ao site
             </Link>
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Política de Privacidade
+              Política de privacidade
             </h1>
             <p className="mt-2 text-lg text-muted-foreground">
               Rodobras Guindastes & Muncks
@@ -63,7 +63,7 @@ export default function PoliticaDePrivacidadePage() {
               A Rodobras possui como prioridades o compromisso com a privacidade
               e segurança nos comprometendo com a transparência do tratamento de
               dados pessoais dos nossos usuários/clientes. Por isso, esta
-              presente Política de Privacidade estabelece como é feita a
+              presente Política de privacidade estabelece como é feita a
               coleta, uso e transferência de informações de clientes ou outras
               pessoas que acessam ou usam nosso site.
             </p>
@@ -84,7 +84,7 @@ export default function PoliticaDePrivacidadePage() {
               23.694.035/0001-73, situada na Rua Paula Ramos, n° 702, Coqueiros,
               Sala 1601, CEP: 88080-401, na cidade de Florianópolis – SC, no
               papel de Controladora de Dados, obriga-se ao disposto na presente
-              Política de Privacidade.
+              Política de privacidade.
             </p>
 
             <section className="space-y-4">
@@ -99,7 +99,7 @@ export default function PoliticaDePrivacidadePage() {
                 dados pessoais em um de nossos formulários:
               </p>
               <p className="leading-relaxed">
-                O Formulário de Orçamento de operação é utilizado quando o
+                O formulário de orçamento de operação é utilizado quando o
                 usuário/cliente entra em contato com a Rodobras buscando obter
                 estimativa de custo da locação. Aqui, são coletados: nome, nome
                 da empresa, telefone, CPF, e-mail e endereço da operação.
@@ -124,7 +124,7 @@ export default function PoliticaDePrivacidadePage() {
               <p className="leading-relaxed">
                 Ao utilizar os serviços da Rodobras e fornecer seus dados
                 pessoais, você está ciente e consentindo com as disposições
-                desta Política de Privacidade, além de conhecer seus direitos e
+                desta Política de privacidade, além de conhecer seus direitos e
                 como exercê-los.
               </p>
               <p className="leading-relaxed">
@@ -368,7 +368,7 @@ export default function PoliticaDePrivacidadePage() {
                 armazenados em nuvem no exterior.
               </p>
               <p className="leading-relaxed">
-                Ao concordar com essa Política de Privacidade, você concorda com
+                Ao concordar com essa Política de privacidade, você concorda com
                 esse compartilhamento, que se dará conforme as finalidades
                 descritas no presente instrumento.
               </p>
@@ -404,21 +404,21 @@ export default function PoliticaDePrivacidadePage() {
               </p>
               <p className="leading-relaxed">
                 Você pode ter maiores informações sobre os Cookies que utilizamos
-                e como eles funcionam na nossa Política de Cookies, disponível
+                e como eles funcionam na nossa Política de cookies, disponível
                 neste documento (Anexo I).
               </p>
             </section>
 
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-foreground">
-                9. Alteração desta Política de Privacidade
+                9. Alteração desta Política de privacidade
               </h2>
               <p className="leading-relaxed">
-                A atual versão da Política de Privacidade foi formulada e
+                A atual versão da Política de privacidade foi formulada e
                 atualizada pela última vez em: 17/12/2022.
               </p>
               <p className="leading-relaxed">
-                Reservamos o direito de modificar essa Política de Privacidade a
+                Reservamos o direito de modificar essa Política de privacidade a
                 qualquer tempo, principalmente em função da adequação a eventuais
                 alterações feitas em nosso site ou em âmbito legislativo.
                 Recomendamos que você a revise com frequência.
@@ -444,7 +444,7 @@ export default function PoliticaDePrivacidadePage() {
                 42 ao 45 da Lei Geral de Proteção de Dados.
               </p>
               <p className="leading-relaxed">
-                Nos comprometemos em manter esta Política de Privacidade
+                Nos comprometemos em manter esta Política de privacidade
                 atualizada, observando suas disposições e zelando por seu
                 cumprimento. Além disso, também assumimos o compromisso de buscar
                 condições técnicas e organizativas seguras aptas a proteger todo
@@ -512,13 +512,13 @@ export default function PoliticaDePrivacidadePage() {
               </p>
             </section>
 
-            {/* ANEXO I - Política de Cookies */}
+            {/* ANEXO I - Política de cookies */}
             <section className="border-t border-border pt-10 mt-12 space-y-4">
               <h2 className="text-2xl font-semibold text-foreground">
-                ANEXO I – Política de Cookies
+                ANEXO I – Política de cookies
               </h2>
               <p className="leading-relaxed">
-                Esta Política de Cookies faz parte da Política de privacidade da
+                Esta Política de cookies faz parte da Política de privacidade da
                 Rodobras Guindastes & Muncks LTDA., sendo um documento
                 complementar àquela. Neste documento estão informações objetivas
                 e claras sobre o que são Cookies, quais Cookies utilizamos em
@@ -555,7 +555,7 @@ export default function PoliticaDePrivacidadePage() {
                 navegação. Assim, buscamos entender como você utiliza nosso site
                 e suas aplicações, e com isso, como podemos ajustar o conteúdo
                 para torná-lo mais relevante para você, além de lembrar de suas
-                preferências. Os Cookies participam deste processo justamente
+                preferências. Os cookies participam deste processo justamente
                 porque são eles que armazenam, leem e executam os dados
                 necessários para cumprir com o nosso objetivo.
               </p>
@@ -593,8 +593,8 @@ export default function PoliticaDePrivacidadePage() {
                 5. Disposições finais (Cookies)
               </h3>
               <p className="leading-relaxed">
-                Reservamo-nos o direito de alterar esta Política de Cookies a
-                qualquer tempo. Esta Política de Cookies foi atualizada pela
+                Reservamo-nos o direito de alterar esta Política de cookies a
+                qualquer tempo. Esta Política de cookies foi atualizada pela
                 última vez: 17/12/2022.
               </p>
             </section>

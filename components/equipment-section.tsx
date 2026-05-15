@@ -12,10 +12,10 @@ const equipment = [
   {
     name: "Muncks",
     image: "/munks_rodobras-01.jpg",
-    description: "Articulados sobre caminhao",
+    description: "Articulados sobre caminhão",
   },
   {
-    name: "Carreta Rebaixada",
+    name: "Carreta rebaixada",
     image: "/transportes-especiais_rodobras-01.jpg",
     description: "Para cargas de grande porte",
   },
@@ -30,12 +30,12 @@ const equipment = [
     description: "Para cargas em ambientes fechados",
   },
   {
-    name: "Plataforma Elevatoria",
+    name: "Plataforma elevatória",
     image: "/01.png",
     description: "Elevação segura de pessoal",
   },
   {
-    name: "Equipamentos de Remoção",
+    name: "Equipamentos de remoção",
     image: "/remocoes_rodobras-01.jpg",
     description: "Soluções para ambientes restritos",
   },
@@ -47,7 +47,7 @@ export function EquipmentSection() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <Badge className="mb-4 bg-accent text-accent-foreground">Nossa Frota</Badge>
+          <Badge className="mb-4 bg-accent text-accent-foreground">Nossa frota</Badge>
           <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
             Equipamentos modernos e preparados
           </h2>

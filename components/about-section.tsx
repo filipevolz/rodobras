@@ -6,19 +6,19 @@ import { Wrench, Users, Award } from "lucide-react"
 const features = [
   {
     icon: Wrench,
-    title: "Equipamentos Novos e Modernos",
+    title: "Equipamentos novos e modernos",
     description:
       "Contamos com uma frota nova e moderna preparada para qualquer desafio de peso e altura.",
   },
   {
     icon: Users,
-    title: "Equipe Experiente",
+    title: "Equipe experiente",
     description:
       "Equipe comprometida e credenciada pela experiência, capacitada em cursos e treinamentos.",
   },
   {
     icon: Award,
-    title: "Qualidade Comprovada",
+    title: "Qualidade comprovada",
     description:
       "Há mais de 25 anos nos dedicamos exclusivamente a elevação e movimentação de cargas.",
   },
@@ -29,7 +29,7 @@ export function AboutSection() {
     <section id="about" className="bg-background py-12 md:py-16 lg:py-28" aria-labelledby="sobre-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mb-4 md:mb-8 flex justify-center">
-          <Badge variant="secondary">Sobre Nos</Badge>
+          <Badge variant="secondary">Sobre nós</Badge>
         </div>
 
         <div className="flex flex-col-reverse items-center gap-8 lg:flex-row lg:gap-16">
@@ -54,7 +54,7 @@ export function AboutSection() {
               <span className="text-accent">desde 1999</span>
             </h2>
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Geramos resultados inteligentes, econômicos e seguros para problemas de peso e altura. Atuamos em atendimentos específicos e imediatos, contratos por períodos alongados em grandes obras nas cidades de Santa Catarina, com foco na grande Florianópolis, Tijucas, Itajai, Balneário Camboriú e demais cidades litorâneas. No estado do Rio de Janeiro, com forte presença na Capital e Baixada Fluminense.
+              Geramos resultados inteligentes, econômicos e seguros para problemas de peso e altura. Atuamos em atendimentos específicos e imediatos, contratos por períodos alongados em grandes obras nas cidades de Santa Catarina, com foco na grande Florianópolis, Tijucas, Itajai, Balneário Camboriú e demais cidades litorâneas. No estado do Rio de Janeiro, com forte presença na capital e Baixada Fluminense.
             </p>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
               Orgulhamo-nos de nossa presença em importantes obras e grandes projetos de nível nacional, que nos deram referência em bom atendimento em ambientes complexos e duradouros.

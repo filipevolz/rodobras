@@ -15,7 +15,7 @@ export function ClientsSection() {
     <section id="clientes" className="bg-muted py-20 lg:py-28" aria-labelledby="clientes-heading">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <header className="mx-auto max-w-2xl text-center">
-          <Badge variant="secondary" className="mb-4">Nossos Clientes</Badge>
+          <Badge variant="secondary" className="mb-4">Nossos clientes</Badge>
           <h2 id="clientes-heading" className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
             Confiança de grandes empresas
           </h2>

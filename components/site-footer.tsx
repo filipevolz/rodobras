@@ -8,16 +8,16 @@ import { LOGO_ALT } from "@/lib/seo"
 
 const footerLinks = {
   servicos: [
-    { label: "Locação de Guindastes", href: "#products" },
-    { label: "Locação de Muncks", href: "#products" },
-    { label: "Remoções de Cargas", href: "#products" },
-    { label: "Transportes Especiais", href: "#products" },
+    { label: "Locação de guindastes", href: "#products" },
+    { label: "Locação de muncks", href: "#products" },
+    { label: "Remoções de cargas", href: "#products" },
+    { label: "Transportes especiais", href: "#products" },
   ],
   empresa: [
-    { label: "Sobre Nós", href: "#about" },
+    { label: "Sobre nós", href: "#about" },
     { label: "Clientes", href: "#clientes" },
     { label: "Contato", href: "#contact" },
-    { label: "Política de Privacidade", href: "/politica-de-privacidade" },
+    { label: "Política de privacidade", href: "/politica-de-privacidade" },
   ],
 }
 
@@ -41,7 +41,7 @@ export function SiteFooter() {
           </div>
 
           <nav aria-label="Serviços" className="lg:justify-self-center">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-primary-foreground">
+            <h4 className="text-xs font-semibold tracking-widest text-primary-foreground">
               Serviços
             </h4>
             <ul className="mt-4 flex flex-col gap-2">
@@ -59,7 +59,7 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Empresa" className="lg:justify-self-center">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-primary-foreground">
+            <h4 className="text-xs font-semibold tracking-widest text-primary-foreground">
               Empresa
             </h4>
             <ul className="mt-4 flex flex-col gap-2">
@@ -77,7 +77,7 @@ export function SiteFooter() {
           </nav>
 
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-primary-foreground mb-2">
+            <h4 className="text-xs font-semibold tracking-widest text-primary-foreground mb-2">
               Localização
             </h4>
             <div className="overflow-hidden rounded-lg w-full">
