@@ -8,85 +8,82 @@ export function StructuredData() {
   const homeUrl = absolutePageUrl('/')
   const logoUrl = `${siteUrl}${basePath}/rodobras-marca.png`
   const sameAs = getSocialSameAs()
+  const mapsQuery = encodeURIComponent(
+    `${BUSINESS.streetAddress}, ${BUSINESS.addressLocality}, ${BUSINESS.addressRegion}, ${BUSINESS.addressCountry}`,
+  )
 
-  const states = new Set(['Santa Catarina', 'Rio de Janeiro'])
-  const areaServed = BUSINESS.areaServedNames.map((name) => ({
-    '@type': states.has(name) ? 'State' : 'City',
-    name,
-  }))
-
-  const graph = {
+  const localBusiness = {
     '@context': 'https://schema.org',
-    '@graph': [
+    '@type': 'LocalBusiness',
+    '@id': `${siteUrl}/#localbusiness`,
+    name: BUSINESS.tradeName,
+    description: SITE_META_DESCRIPTION,
+    url: homeUrl,
+    image: logoUrl,
+    logo: logoUrl,
+    email: BUSINESS.emailPublic,
+    telephone: BUSINESS.telephoneE164,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: BUSINESS.geo.latitude,
+      longitude: BUSINESS.geo.longitude,
+    },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: BUSINESS.streetAddress,
+      addressLocality: BUSINESS.addressLocality,
+      addressRegion: BUSINESS.addressRegion,
+      postalCode: BUSINESS.postalCode,
+      addressCountry: BUSINESS.addressCountry,
+    },
+    openingHoursSpecification: BUSINESS.openingHoursSpecification.map((hours) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [...hours.dayOfWeek],
+      opens: hours.opens,
+      closes: hours.closes,
+    })),
+    areaServed: [...BUSINESS.areaServedNames],
+    contactPoint: [
       {
-        '@type': 'LocalBusiness',
-        '@id': `${siteUrl}/#business`,
-        name: BUSINESS.tradeName,
-        legalName: BUSINESS.legalName,
-        description: SITE_META_DESCRIPTION,
-        url: siteUrl,
-        logo: { '@type': 'ImageObject', url: logoUrl },
-        image: [{ '@type': 'ImageObject', url: logoUrl }],
-        email: BUSINESS.emailPublic,
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
         telephone: BUSINESS.telephoneE164,
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: BUSINESS.geo.latitude,
-          longitude: BUSINESS.geo.longitude,
-        },
-        identifier: {
-          '@type': 'PropertyValue',
-          propertyID: 'https://www.gov.br/receitafederal/pt-br',
-          name: 'CNPJ',
-          value: BUSINESS.cnpj,
-        },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'customer service',
-          telephone: BUSINESS.telephoneE164,
-          email: BUSINESS.emailPublic,
-          availableLanguage: 'pt-BR',
-          areaServed: {
-            '@type': 'Country',
-            name: 'BR',
-          },
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: BUSINESS.streetAddress,
-          addressLocality: BUSINESS.addressLocality,
-          addressRegion: BUSINESS.addressRegion,
-          postalCode: BUSINESS.postalCode,
-          addressCountry: BUSINESS.addressCountry,
-        },
-        areaServed,
-        ...(sameAs.length ? { sameAs } : {}),
-        priceRange: '$$',
-      },
-      {
-        '@type': 'WebSite',
-        '@id': `${siteUrl}/#website`,
-        url: siteUrl,
-        name: BUSINESS.tradeName,
-        description: SITE_META_DESCRIPTION,
-        inLanguage: 'pt-BR',
-        publisher: { '@id': `${siteUrl}/#business` },
-      },
-      {
-        '@type': 'WebPage',
-        '@id': `${homeUrl}#webpage`,
-        url: homeUrl,
-        name: BUSINESS.tradeName,
-        description: SITE_META_DESCRIPTION,
-        inLanguage: 'pt-BR',
-        isPartOf: { '@id': `${siteUrl}/#website` },
-        about: { '@id': `${siteUrl}/#business` },
-        primaryImageOfPage: { '@type': 'ImageObject', url: logoUrl },
+        email: BUSINESS.emailPublic,
+        availableLanguage: 'pt-BR',
+        areaServed: 'BR',
       },
     ],
+    ...(sameAs.length ? { sameAs } : {}),
+  }
+
+  const webSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: BUSINESS.tradeName,
+    url: homeUrl,
+    description: SITE_META_DESCRIPTION,
+    inLanguage: 'pt-BR',
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#localbusiness`,
+      name: BUSINESS.tradeName,
+      url: homeUrl,
+      logo: logoUrl,
+    },
   }
 
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+      />
+    </>
   )
 }

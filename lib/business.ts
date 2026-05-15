@@ -20,6 +20,14 @@ export const BUSINESS = {
     latitude: -27.606194,
     longitude: -48.593622,
   },
+  /** Horário comercial (ajuste se necessário). Usado no schema LocalBusiness. */
+  openingHoursSpecification: [
+    {
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] as const,
+      opens: '08:00',
+      closes: '18:00',
+    },
+  ],
   areaServedNames: [
     'Florianópolis',
     'São José',

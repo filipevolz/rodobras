@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { DeferredScripts } from '@/components/deferred-scripts'
 import { DeferredAnalytics } from '@/components/deferred-analytics'
 import { StructuredData } from '@/components/structured-data'
+import { alternatesForPath } from '@/lib/alternates'
 import { getMetadataBase } from '@/lib/site'
 import { SITE_DEFAULT_TITLE, SITE_META_DESCRIPTION } from '@/lib/seo'
 import { basePath } from '@/lib/utils'
@@ -46,9 +47,7 @@ export const metadata: Metadata = {
     'Palhoça',
     'Biguaçu',
   ],
-  alternates: {
-    canonical: '/',
-  },
+  alternates: alternatesForPath('/'),
   robots: {
     index: true,
     follow: true,

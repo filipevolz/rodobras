@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { alternatesForPath } from "@/lib/alternates"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -22,9 +23,7 @@ export const metadata: Metadata = {
     "Biguaçu",
     "Santa Catarina",
   ],
-  alternates: {
-    canonical: "/politica-de-privacidade/",
-  },
+  alternates: alternatesForPath("/politica-de-privacidade"),
   openGraph: {
     title: "Política de Privacidade | Rodobras Guindastes",
     description: politicaDescription,
