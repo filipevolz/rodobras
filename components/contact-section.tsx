@@ -4,23 +4,26 @@ import { basePath } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { BUSINESS } from "@/lib/business"
 import { getWhatsAppMeHref, SITE_HOME_WHATSAPP_PREFILL } from "@/lib/whatsapp-links"
 import { SocialLinks } from "@/components/social-links"
 import { LOGO_ALT } from "@/lib/seo"
 
 const whatsAppComMensagemHref = getWhatsAppMeHref(SITE_HOME_WHATSAPP_PREFILL)
+const phoneDisplay = BUSINESS.telephoneDisplay
+const phoneTelHref = `tel:${BUSINESS.telephoneE164}`
 
 const contactInfo = [
   {
     icon: Phone,
     label: "Telefone",
-    value: "(48) 3285-2727",
-    href: "tel:+5548991582727",
+    value: phoneDisplay,
+    href: phoneTelHref,
   },
   {
     icon: MessageCircle,
     label: "Whatsapp",
-    value: "(48) 3285-2727",
+    value: phoneDisplay,
     href: whatsAppComMensagemHref,
   },
   {
@@ -32,7 +35,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Atuação",
-    value: "SC e RJ",
+    value: "SC - Grande Florianópolis e litoral catarinense",
     href: "#",
   },
 ]
@@ -52,18 +55,33 @@ export function ContactSection() {
               Entre em contato para orçamentos e informações. Nossa equipe está pronta para atender seu projeto.
             </p>
 
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2" aria-label="Canais de contato">
+            <ul
+              className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch"
+              aria-label="Canais de contato"
+            >
               {contactInfo.map((info) => (
-                <li key={info.label}>
-                  <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="block">
-                    <Card className="border-border/60 transition-all hover:border-accent/40 hover:shadow-md">
-                      <CardContent className="flex items-center gap-4 py-4">
-                        <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10" aria-hidden="true">
+                <li key={info.label} className="flex min-h-0">
+                  <a
+                    href={info.href}
+                    target={info.href.startsWith("http") ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="flex w-full min-w-0"
+                  >
+                    <Card className="flex min-h-[6.75rem] w-full flex-col border-border/60 transition-all hover:border-accent/40 hover:shadow-md sm:min-h-[7rem]">
+                      <CardContent className="flex flex-1 items-center gap-4 py-4">
+                        <span
+                          className="flex size-10 shrink-0 items-center justify-center self-start rounded-lg bg-primary/10 sm:self-center"
+                          aria-hidden="true"
+                        >
                           <info.icon className="size-5 text-primary" />
                         </span>
-                        <span className="min-w-0">
-                          <span className="block text-xs text-left font-medium tracking-wider text-muted-foreground">{info.label}</span>
-                          <span className="block truncate text-left text-sm font-semibold text-foreground">{info.value}</span>
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-left text-xs font-medium tracking-wider text-muted-foreground">
+                            {info.label}
+                          </span>
+                          <span className="mt-1 block min-h-[2.75rem] text-pretty text-left text-sm font-semibold leading-snug text-foreground">
+                            {info.value}
+                          </span>
                         </span>
                       </CardContent>
                     </Card>

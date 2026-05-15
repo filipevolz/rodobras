@@ -1,6 +1,6 @@
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { getWhatsAppMeHref, SITE_HOME_WHATSAPP_PREFILL } from "@/lib/whatsapp-links"
 
 export function CtaSection() {
   return (
@@ -21,10 +21,10 @@ export function CtaSection() {
         <div className="flex flex-col items-center gap-4 sm:flex-row">
 
           <Button asChild variant="outline" size="lg" className="border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground dark:border-accent-foreground/50 dark:bg-transparent dark:hover:bg-accent-foreground/20 dark:hover:border-accent-foreground/70">
-            <a href={getWhatsAppMeHref(SITE_HOME_WHATSAPP_PREFILL)} target="_blank" title="(48) 3285-2727">
+            <Link href="/orcamento/">
               Solicite um orçamento
               <ArrowRight className="size-4" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

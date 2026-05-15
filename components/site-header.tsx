@@ -9,6 +9,7 @@ import { basePath } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { BUSINESS } from "@/lib/business"
 import { getWhatsAppCtaHref } from "@/lib/whatsapp-links"
 import { LOGO_ALT } from "@/lib/seo"
 
@@ -57,7 +58,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
           <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" title="(48) 3285-2727">
+            <a href={whatsappHref} target="_blank" rel="noopener noreferrer" title={BUSINESS.telephoneDisplay}>
               <Phone className="size-4" />
               Entre em contato
             </a>
@@ -89,7 +90,7 @@ export function SiteHeader() {
               ))}
               <div className="mt-4 px-4">
                 <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer" title="(48) 3285-2727">
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer" title={BUSINESS.telephoneDisplay}>
                     <Phone className="size-4" />
                     Entre em contato
                   </a>

@@ -1,6 +1,6 @@
 import Image from "next/image"
+import Link from "next/link"
 import { basePath } from "@/lib/utils"
-import { getWhatsAppMeHref, SITE_HOME_WHATSAPP_PREFILL } from "@/lib/whatsapp-links"
 import { ArrowRight, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -36,10 +36,10 @@ export function HeroSection() {
 
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 text-base font-semibold">
-              <a href={getWhatsAppMeHref(SITE_HOME_WHATSAPP_PREFILL)} target="_blank" rel="noopener noreferrer">
+              <Link href="/orcamento/">
                 Solicite um orçamento
                 <ArrowRight className="size-4" />
-              </a>
+              </Link>
             </Button>
 
           </div>

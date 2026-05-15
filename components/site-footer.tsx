@@ -4,6 +4,7 @@ import { basePath } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import { LocationsMap } from "@/components/locations-map-client"
 import { SocialLinks } from "@/components/social-links"
+import { BUSINESS } from "@/lib/business"
 import { LOGO_ALT } from "@/lib/seo"
 
 const footerLinks = {
@@ -95,10 +96,10 @@ export function SiteFooter() {
             </p>
             <nav className="flex items-center gap-6" aria-label="Contato">
               <a
-                href="tel:+5548991582727"
+                href={`tel:${BUSINESS.telephoneE164}`}
                 className="text-xs text-primary-foreground transition-colors hover:text-primary-foreground hover:underline"
               >
-                (48) 3285-2727
+                {BUSINESS.telephoneDisplay}
               </a>
               <a
                 href="mailto:contato@rodobrasguindastes.com.br"

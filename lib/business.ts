@@ -3,8 +3,8 @@ export const BUSINESS = {
   tradeName: 'Rodobras Guindastes',
   legalName: 'Rodobras Guindastes & Muncks LTDA',
   cnpj: '23.694.035/0001-73',
-  telephoneDisplay: '(48) 3285-2727',
-  /** E.164 do telefone fixo exibido no site */
+  telephoneDisplay: '48 99158-2727',
+  /** E.164 do telefone/WhatsApp exibido no site */
   telephoneE164: '+5548991582727',
   /** WhatsApp (mesmo número usado em wa.me no site) */
   whatsappE164: '+5548991582727',
