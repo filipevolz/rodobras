@@ -65,7 +65,7 @@ export function HeroSection() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-border hidden md:block">
               <Image
                 src={`${basePath}/munks_rodobras-01.jpg`}
-                alt="Guindaste Rodobras em operação"
+                alt="Guindaste da Rodobras em operação de içamento"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

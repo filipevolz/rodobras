@@ -15,6 +15,11 @@ export const BUSINESS = {
   addressRegion: 'SC',
   postalCode: '88080-401',
   addressCountry: 'BR',
+  /** Sede — Rua Paula Ramos, Coqueiros, Florianópolis (para schema geo). */
+  geo: {
+    latitude: -27.606194,
+    longitude: -48.593622,
+  },
   areaServedNames: [
     'Florianópolis',
     'São José',

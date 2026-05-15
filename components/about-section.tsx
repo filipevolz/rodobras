@@ -39,7 +39,7 @@ export function AboutSection() {
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
                 <Image
                 src={`${basePath}/04.jpg`}
-                alt="Rodobras Guindastes - soluções para qualquer porte de projeto"
+                alt="Equipe e equipamentos Rodobras — soluções em içamento e transporte especial"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

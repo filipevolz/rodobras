@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { BUSINESS } from '@/lib/business'
+import { LOGO_ALT } from '@/lib/seo'
 
 const width = 1200
 const height = 630
@@ -61,7 +62,7 @@ export async function createShareImageResponse(): Promise<ImageResponse> {
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element -- next/og ImageResponse */}
-              <img src={logoSrc} alt="" width={250} height={48} />
+              <img src={logoSrc} alt={LOGO_ALT} width={250} height={48} />
             </div>
             <div
               style={{
@@ -129,7 +130,7 @@ export async function createShareImageResponse(): Promise<ImageResponse> {
           {/* eslint-disable-next-line @next/next/no-img-element -- next/og ImageResponse */}
           <img
             src={photoSrc}
-            alt=""
+            alt="Caminhão munck Rodobras em operação"
             width={576}
             height={630}
             style={{

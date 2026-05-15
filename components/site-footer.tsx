@@ -4,6 +4,7 @@ import { basePath } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
 import { LocationsMap } from "@/components/locations-map-client"
 import { SocialLinks } from "@/components/social-links"
+import { LOGO_ALT } from "@/lib/seo"
 
 const footerLinks = {
   servicos: [
@@ -28,7 +29,7 @@ export function SiteFooter() {
           <div className="lg:col-span-2">
             <Image
               src={`${basePath}/logo-dark.png`}
-              alt="Rodobras Guindastes"
+              alt={LOGO_ALT}
               width={140}
               height={40}
               className="h-9 w-auto brightness-0 invert"

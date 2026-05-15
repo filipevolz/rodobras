@@ -5,6 +5,7 @@ import { DeferredScripts } from '@/components/deferred-scripts'
 import { DeferredAnalytics } from '@/components/deferred-analytics'
 import { StructuredData } from '@/components/structured-data'
 import { getMetadataBase } from '@/lib/site'
+import { SITE_DEFAULT_TITLE, SITE_META_DESCRIPTION } from '@/lib/seo'
 import { basePath } from '@/lib/utils'
 import './globals.css'
 
@@ -14,9 +15,8 @@ const _inter = Inter({
   display: 'swap',
 })
 
-const defaultTitle = 'Rodobras Guindastes | Locação de Guindastes e Muncks'
-const defaultDescription =
-  'Locação de guindastes, muncks, carretas rebaixadas e serviços de remoção de cargas pesadas. Atendemos Florianópolis (Coqueiros, Via Expressa, Norte da Ilha), São José, Palhoça e Biguaçu. Soluções integradas para qualquer porte de projeto desde 1999.'
+const defaultTitle = SITE_DEFAULT_TITLE
+const defaultDescription = SITE_META_DESCRIPTION
 
 export const metadata: Metadata = {
   metadataBase: getMetadataBase(),

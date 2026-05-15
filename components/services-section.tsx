@@ -61,7 +61,7 @@ function ServiceCarousel({
               <div className="relative h-72 w-full">
                 <Image
                   src={`${basePath}${src}`}
-                  alt={`${title} - imagem ${i + 1}`}
+                  alt={`${title} Rodobras — foto ${i + 1}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -155,7 +155,7 @@ export function ServicesSection() {
                   <>
                     <Image
                       src={`${basePath}${service.image}`}
-                      alt={service.title}
+                      alt={`${service.title} — serviço Rodobras Guindastes`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"

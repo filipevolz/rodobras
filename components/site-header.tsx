@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { getWhatsAppCtaHref } from "@/lib/whatsapp-links"
+import { LOGO_ALT } from "@/lib/seo"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -31,7 +32,7 @@ export function SiteHeader() {
         <Link href="/" className="flex items-center">
           <Image
             src={`${basePath}/logo-dark.png`}
-            alt="Rodobras Guindastes"
+            alt={LOGO_ALT}
             width={140}
             height={40}
             className="h-9 w-auto dark:invert dark:[filter:invert(1)_hue-rotate(180deg)]"

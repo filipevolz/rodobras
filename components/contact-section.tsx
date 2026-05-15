@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { getWhatsAppMeHref, SITE_HOME_WHATSAPP_PREFILL } from "@/lib/whatsapp-links"
 import { SocialLinks } from "@/components/social-links"
+import { LOGO_ALT } from "@/lib/seo"
 
 const whatsAppComMensagemHref = getWhatsAppMeHref(SITE_HOME_WHATSAPP_PREFILL)
 
@@ -83,7 +84,7 @@ export function ContactSection() {
                 <span className="flex size-20 items-center justify-center" aria-hidden="true">
                   <Image
                     src={`${basePath}/rodobras-marca.png`}
-                    alt="Rodobras Guindastes"
+                    alt={LOGO_ALT}
                     width={80}
                     height={80}
                     className="w-auto object-contain brightness-0 invert"

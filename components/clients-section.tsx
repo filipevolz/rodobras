@@ -32,7 +32,7 @@ export function ClientsSection() {
             >
               <Image
                 src={`${basePath}${client.src}`}
-                alt={`Logo ${client.name}`}
+                alt={`Logo do cliente ${client.name}`}
                 width={120}
                 height={48}
                 className={cn(

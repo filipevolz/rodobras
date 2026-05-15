@@ -4,6 +4,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { basePath } from "@/lib/utils"
 import { getWhatsAppCtaHref } from "@/lib/whatsapp-links"
+import { WHATSAPP_ICON_ALT } from "@/lib/seo"
 
 const WHATSAPP_LABEL = "Contato WhatsApp Rodobras"
 
@@ -22,11 +23,10 @@ export function WhatsAppFloat() {
     >
       <Image
         src={`${basePath}/whats.png`}
-        alt=""
+        alt={WHATSAPP_ICON_ALT}
         width={32}
         height={32}
         className="size-full object-contain brightness-0 invert"
-        aria-hidden
       />
     </a>
   )
