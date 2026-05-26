@@ -110,15 +110,7 @@ export function SiteFooter() {
             </nav>
           </div>
           <p className="text-xs text-primary-foreground/80 text-center md:text-left">
-            Desenvolvido por{" "}
-            <a
-              href="https://www.linkedin.com/in/filipe-volz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary-foreground hover:underline"
-            >
-              Filipe Volz
-            </a>
+            Desenvolvido por Fortis Rent
           </p>
         </div>
       </div>
