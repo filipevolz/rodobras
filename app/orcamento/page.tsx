@@ -9,7 +9,7 @@ const description =
   'Solicite orçamento de locação de guindastes, muncks, remoções e transportes especiais. Preencha o formulário e envie pelo whatsapp para a Rodobras Guindastes.'
 
 export const metadata: Metadata = {
-  title: 'Solicitar orçamento',
+  title: 'Solicite orçamento',
   description,
   keywords: [
     'orçamento',
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   ],
   alternates: alternatesForPath('/orcamento'),
   openGraph: {
-    title: 'Solicitar orçamento | Rodobras Guindastes',
+    title: 'Solicite orçamento | Rodobras Guindastes',
     description,
     url: '/orcamento/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Solicitar orçamento | Rodobras Guindastes',
+    title: 'Solicite orçamento | Rodobras Guindastes',
     description,
   },
 }

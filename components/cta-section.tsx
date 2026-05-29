@@ -22,7 +22,7 @@ export function CtaSection() {
 
           <Button asChild variant="outline" size="lg" className="border-accent-foreground/30 bg-transparent text-accent-foreground hover:bg-accent-foreground/10 hover:text-accent-foreground dark:border-accent-foreground/50 dark:bg-transparent dark:hover:bg-accent-foreground/20 dark:hover:border-accent-foreground/70">
             <Link href="/orcamento/">
-              Solicite um orçamento
+              Solicite orçamento
               <ArrowRight className="size-4" />
             </Link>
           </Button>

@@ -37,7 +37,7 @@ export function HeroSection() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 text-base font-semibold">
               <Link href="/orcamento/">
-                Solicite um orçamento
+                Solicite orçamento
                 <ArrowRight className="size-4" />
               </Link>
             </Button>

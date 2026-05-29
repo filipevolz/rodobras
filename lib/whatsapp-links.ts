@@ -2,7 +2,7 @@ import { BUSINESS } from '@/lib/business'
 
 const waDigits = BUSINESS.whatsappE164.replace(/\D/g, '')
 
-/** Texto nos CTAs “Solicite um orçamento” da página inicial (não usar em /orcamento). */
+/** Texto nos CTAs de WhatsApp (não usar em /orcamento). */
 export const SITE_HOME_WHATSAPP_PREFILL =
   'Oi! Vim do site da Rodobras e quero fazer um orçamento.'
 

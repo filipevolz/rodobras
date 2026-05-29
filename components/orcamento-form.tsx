@@ -113,7 +113,7 @@ export function OrcamentoForm() {
   return (
     <Card className="border-border/80 shadow-sm">
       <CardHeader>
-        <CardTitle className="text-2xl">Solicitar orçamento</CardTitle>
+        <CardTitle className="text-2xl">Solicite orçamento</CardTitle>
         <CardDescription className="text-pretty leading-relaxed">
           Preencha os campos abaixo. Ao enviar, abrimos o whatsapp com a mensagem pronta para a equipe da{' '}
           <span className="font-medium text-foreground">Rodobras</span> — é só confirmar o envio no app.
